@@ -37,7 +37,7 @@ const Login = () => {
                         
                     </div>
                     </div>
-                    <Link to={'forgot-password'} >
+                    <Link to={'/forgot-password'} className='block w-fit ml-auto hover:underline hover:text-red-600' >
                         Forgot Password
                     </Link>
                     
