@@ -35,13 +35,13 @@ const SignUp = () => {
               </div>
               <form className='pt-6' onSubmit={handleSubmit}>
                   <div className='grid'>
-                      <label>Email : </label>
+                      <label>Name : </label>
                       <div className='bg-slate-100 p-2'>
                       <input 
-                      type='email' 
-                      placeholder='enter email' 
-                      name='email'
-                      value={data.email}
+                      type='text' 
+                      placeholder='enter your name' 
+                      name='name'
+                      value={data.name}
                       onChange={handleOnChange}
                       className='w-full h-full outline-none bg-transparent' />
                       </div>
