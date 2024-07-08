@@ -67,6 +67,30 @@ const SignUp = () => {
                           
                       </div>
                       </div>
+                  
+                      
+                  </div>
+                  <div>
+                      <label>Confirm Password : </label>
+                      <div className='bg-slate-100 p-2 flex' >
+                      <input 
+                      type={showPassword ? "text" : "password" } 
+                      placeholder='enter password' 
+                      name='password'
+                      value={data.password}
+                      onChange={handleOnChange}
+                      className='w-full h-full outline-none bg-transparent' />
+                      <div className='cursor-pointer text-xl' onClick={()=>{setShowPassword((preve)=>!preve)}} > 
+                          <span>
+                              {
+                                  showPassword  ? (<FaEyeSlash/> ) :  (<FaEye/> )
+                              }
+                              
+                             
+                          </span>
+                          
+                      </div>
+                      </div>
                       <Link to={'/forgot-password'} className='block w-fit ml-auto hover:underline hover:text-red-600' >
                           Forgot Password ?
                       </Link>
