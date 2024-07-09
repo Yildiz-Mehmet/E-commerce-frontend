@@ -39,7 +39,9 @@ const SignUp = () => {
                 <div>
                 <img src={loginIcons} alt='login icons' />      
                 </div>
-                 
+                 <div className='text-xs bg-slate-200'>
+                    Upload Photo
+                 </div>
               </div>
               <form className='pt-6 flex flex-col gap-2' onSubmit={handleSubmit}>
                   <div className='grid'>
