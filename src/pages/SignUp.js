@@ -3,6 +3,7 @@ import loginIcons from '../assest/signin.gif'
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import imageTobase64 from '../helpers/imageTobase64'
 
 const SignUp = () => {
   const [showPassword,setShowPassword] = useState(false)
@@ -27,8 +28,18 @@ const SignUp = () => {
       })
 
    }
-   const handleUploadPic = (e)=>{
+   const handleUploadPic = async(e)=>{
 const file = e.target.files[0]
+
+
+const imagePic = await imageTobase64(file)
+    setData((preve)=>{
+        return{
+            ...preve,
+            profilePic : imagePic
+        }
+      
+    })
    }
    const handleSubmit = (e) =>{ 
       e.preventDefault()
