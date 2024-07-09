@@ -70,7 +70,7 @@ const SignUp = () => {
                       value={data.password}
                       onChange={handleOnChange}
                       className='w-full h-full outline-none bg-transparent' />
-                      <div className='cursor-pointer text-xl' onClick={()=>{setShowConfirmPassword((preve)=>!preve)}} > 
+                      <div className='cursor-pointer text-xl' onClick={()=>{setShowPassword((preve)=>!preve)}} > 
                           <span>
                               {
                                   showPassword  ? (<FaEyeSlash/> ) :  (<FaEye/> )
@@ -94,7 +94,7 @@ const SignUp = () => {
                       value={data.password}
                       onChange={handleOnChange}
                       className='w-full h-full outline-none bg-transparent' />
-                      <div className='cursor-pointer text-xl' onClick={()=>{setShowPassword((preve)=>!preve)}} > 
+                      <div className='cursor-pointer text-xl' onClick={()=>{setShowConfirmPassword((preve)=>!preve)}} > 
                           <span>
                               {
                                   showPassword  ? (<FaEyeSlash/> ) :  (<FaEye/> )
