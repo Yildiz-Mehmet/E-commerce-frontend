@@ -27,6 +27,9 @@ const SignUp = () => {
       })
 
    }
+   const handleUploadPic = (e)=>{
+const file = e.target.files[0]
+   }
    const handleSubmit = (e) =>{ 
       e.preventDefault()
 
@@ -39,9 +42,16 @@ const SignUp = () => {
                 <div>
                 <img src={loginIcons} alt='login icons' />      
                 </div>
-                 <div className='text-xs bg-opacity-80 bg-slate-200 pb-4 pt-2 cursor-pointer text-center absolute bottom-0 w-full '>
+                <form>
+                    <label>
+                    <div className='text-xs bg-opacity-80 bg-slate-200 pb-4 pt-2 cursor-pointer text-center absolute bottom-0 w-full '>
                     Upload Photo
                  </div>
+                        <input type='file' className='hidden' onChange={handleUploadPic} />
+                    </label>
+              
+                </form>
+               
               </div>
               <form className='pt-6 flex flex-col gap-2' onSubmit={handleSubmit}>
                   <div className='grid'>
