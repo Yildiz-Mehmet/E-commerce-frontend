@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 
 const SignUp = () => {
   const [showPassword,setShowPassword] = useState(false)
+  const [showConfirmPassword,setShowConfirmPassword] = useState(false)
+  
   const [data,setData]=useState({
       email :"",
       password:""
@@ -46,6 +48,18 @@ const SignUp = () => {
                       className='w-full h-full outline-none bg-transparent' />
                       </div>
                   </div>
+                  <div className='grid'>
+                    <label>Email : </label>
+                    <div className='bg-slate-100 p-2'>
+                    <input 
+                    type='email' 
+                    placeholder='enter email' 
+                    name='email'
+                    value={data.email}
+                    onChange={handleOnChange}
+                    className='w-full h-full outline-none bg-transparent' />
+                    </div>
+                </div>
                   <div>
                       <label>Password : </label>
                       <div className='bg-slate-100 p-2 flex' >
