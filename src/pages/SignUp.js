@@ -51,7 +51,7 @@ const imagePic = await imageTobase64(file)
           <div className='bg-white p-5 w-full max-w-sm mx-auto '>
               <div className='w-20 h-20 mx-auto relative overflow-hidden rounded-full'>
                 <div>
-                <img src={loginIcons} alt='login icons' />      
+                <img src={data.profilePic || loginIcons } alt='login icons' />      
                 </div>
                 <form>
                     <label>
@@ -74,6 +74,7 @@ const imagePic = await imageTobase64(file)
                       name='name'
                       value={data.name}
                       onChange={handleOnChange}
+                      required
                       className='w-full h-full outline-none bg-transparent' />
                       </div>
                   </div>
@@ -86,6 +87,7 @@ const imagePic = await imageTobase64(file)
                     name='email'
                     value={data.email}
                     onChange={handleOnChange}
+                    required
                     className='w-full h-full outline-none bg-transparent' />
                     </div>
                 </div>
@@ -98,6 +100,7 @@ const imagePic = await imageTobase64(file)
                       name='password'
                       value={data.password}
                       onChange={handleOnChange}
+                      required
                       className='w-full h-full outline-none bg-transparent' />
                       <div className='cursor-pointer text-xl' onClick={()=>{setShowPassword((preve)=>!preve)}} > 
                           <span>
@@ -122,6 +125,7 @@ const imagePic = await imageTobase64(file)
                       name='confirmPassword'
                       value={data.confirmPassword}
                       onChange={handleOnChange}
+                      required
                       className='w-full h-full outline-none bg-transparent' />
                       <div className='cursor-pointer text-xl' onClick={()=>{setShowConfirmPassword((preve)=>!preve)}} > 
                           <span>
