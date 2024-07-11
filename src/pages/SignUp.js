@@ -55,7 +55,9 @@ const imagePic = await imageTobase64(file)
     
           } )
     
-          const data = await dataResponse.json()
+          const dataApi = await dataResponse.json()
+
+          console.log("dataApi",dataApi)
       }
       else{
         console.log("please check password and confirm password")
