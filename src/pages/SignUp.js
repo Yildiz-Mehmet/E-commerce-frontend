@@ -4,6 +4,7 @@ import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import imageTobase64 from '../helpers/imageTobase64'
+import SummaryApi from '../common';
 
 const SignUp = () => {
   const [showPassword,setShowPassword] = useState(false)
@@ -41,8 +42,25 @@ const imagePic = await imageTobase64(file)
       
     })
    }
-   const handleSubmit = (e) =>{ 
+   const handleSubmit = async(e) =>{ 
       e.preventDefault()
+
+      if(data.password === data.confirmPassword){
+        const dataResponse = await fetch(SummaryApi.signUp.url,{
+            method : SummaryApi.signUp.method,
+            headers : {
+                "content-type" :   "application/json"
+            },
+            body : JSON.stringify(data)
+    
+          } )
+    
+          const data = await dataResponse.json()
+      }
+      else{
+        console.log("please check password and confirm password")
+      }
+ 
 
    }
   return (
