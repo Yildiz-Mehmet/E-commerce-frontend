@@ -54,7 +54,7 @@ const imagePic = await imageTobase64(file)
             body : JSON.stringify(data)
     
           } )
-    
+    const merhaba = "hello"
           const dataApi = await dataResponse.json()
 
           console.log("dataApi",dataApi)
