@@ -5,7 +5,12 @@ const SummaryApi = {
     signUp :{
         url: `${backendDomin}/api/signup`,
         method : "post"
+    },
+    signIn :{
+        url: `${backendDomin}/api/signin`,
+        method : "post"
     }
+
 }
 
 export default SummaryApi
