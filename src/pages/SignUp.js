@@ -5,6 +5,7 @@ import { FaEyeSlash } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import imageTobase64 from '../helpers/imageTobase64'
 import SummaryApi from '../common';
+import { toast } from 'react-toastify';
 
 const SignUp = () => {
   const [showPassword,setShowPassword] = useState(false)
@@ -56,6 +57,15 @@ const imagePic = await imageTobase64(file)
           } )
     
           const dataApi = await dataResponse.json()
+
+          if(dataApi.success){
+            toast.success(dataApi.message)
+          }
+          if(dataApi.error){
+            toast.error(dataApi.message)
+          }
+
+          
 
           console.log("dataApi",dataApi)
       }
