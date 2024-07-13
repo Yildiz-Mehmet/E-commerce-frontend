@@ -20,6 +20,8 @@ function App() {
 
       const dataApi = await dataResponse.json()
 
+      console.log("data-api" , dataApi)
+
   }
 
 
