@@ -6,18 +6,25 @@ import Footer from './components/Footer';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SummaryApi from './common';
+import { useEffect } from 'react';
 
 function App() {
 
   const fetchUserDetails = async ()=>{
 
-      const dataResponse = await fetch()
+      const dataResponse = await fetch(SummaryApi.current_user.url,{
+        method : SummaryApi.current_user.method,
+        credentials : 'include'
+      } )
+
+      const dataApi = await dataResponse.json()
 
   }
 
 
   useEffect(() => {
-
+    fetchUserDetails()
   }, [])
 
 
