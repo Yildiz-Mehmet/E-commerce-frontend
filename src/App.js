@@ -8,6 +8,19 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
+
+  const fetchUserDetails = async ()=>{
+
+      const dataResponse = await fetch()
+
+  }
+
+
+  useEffect(() => {
+
+  }, [])
+
+
   return (
    <>
     <ToastContainer />
