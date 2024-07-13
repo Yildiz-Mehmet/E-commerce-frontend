@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 
 function App() {
 
-  const fetchUserDetails = async ()=>{
+  const fetchUserDetails = async()=>{
 
       const dataResponse = await fetch(SummaryApi.current_user.url,{
         method : SummaryApi.current_user.method,
